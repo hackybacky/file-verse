@@ -1,0 +1,36 @@
+File Upload API
+Endpoint: /upload
+Method: POST
+
+Description: Uploads a file to the server.
+
+Request:
+
+Headers:
+Content-Type: multipart/form-data
+Body:
+uploadFile: The file to be uploaded
+Response:
+
+Status: 200 OK
+Body: JSON object with fileId , size , timeStamp
+json
+{
+  fileId,
+  size,
+  time
+}
+File Get API
+Endpoint: /file/:fileId
+Method: GET
+
+Description: Fetches a file from the server by its ID.
+
+Parameters:
+
+fileId (URL parameter): The ID of the file to be fetched
+Response:
+
+Headers:
+Content-Type: The appropriate content type for the file (e.g., video/mp4, text/plain)
+Body: The file content
